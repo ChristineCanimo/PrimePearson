@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Prime1.Login" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 
 <!DOCTYPE html>
 
@@ -26,7 +28,7 @@
     <form id="form1" runat="server">
 
     <div class="navbar-default">
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="72px" Width="218px" ImageUrl="~/Images/pearson-white.png" />
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="57px" Width="218px" ImageUrl="~/Images/pearson-white.png" />
 
     </div>
     <br />
@@ -48,6 +50,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="auto-style3">Strictly for HR Administrators only!</span></em></div>
         </div>
          <div class="col-md-5">
+             <br />
              <asp:Panel ID="Panel2" runat="server" CssClass="modalpopup" style="width: initial">
              <center>
              <h2 style="font-family: 'Glyphicons Halflings';"><strong>LOGIN </strong>
@@ -59,24 +62,41 @@
                 <input type="text" class="form-control input-lg" placeholder="Username" name="username" required=""/>
               <br />
                  <div class="form-group">
-                 <input type="password" class="form-control input-lg" placeholder="Password" name="password" required="" />
+                 <input type="password" class="form-control input-lg" placeholder="Password" name="password" required="required" />
               </div>
 
                <div class="form-group">
-                 <input type="submit" class="btn btn-block btn-lg btn-primary" value="Login"/>
+                   <asp:Button ID="Button1" runat="server" Text="Login" class="btn btn-block btn-lg btn-primary" PostBackUrl="~/NewApplicant.aspx" OnClick="Button1_Click1"></asp:Button>
               </div>
                  </center>
             </asp:Panel>
         </div>
     </div>
 
-
-
-
-
-    
+     
+        
     </form>
     
 </body>
 </html>
 
+<!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog1">
+
+       <!-- Modal content-->
+      <div class="modal-content" cssclass="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Leave Group Confirmation</h4>
+        </div>
+        <div class="modal-body">
+         <p>Are you sure you want to leave this group?</p>
+        </div>
+        <div class="modal-footer"><?php foreach($groups as $group){?>
+          <a href="" class="btn btn-primary">Yes</a></button> <?php }?>
+          <a class="btn btn-primary" data-dismiss="modal">No</a></button>
+        </div>
+      </div>
+    </div>
+  </div>

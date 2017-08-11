@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\AjaxControlToolkit.Binary.NET4\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -74,23 +78,47 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Employees.aspx" />
     <Content Include="Images\about-head-06102015.png" />
+    <Content Include="Images\addperson1.png" />
+    <Content Include="Images\addperson2.png" />
+    <Content Include="Images\find1.png" />
+    <Content Include="Images\incentives2.png" />
+    <Content Include="Images\incentiveshover.png" />
     <Content Include="Images\kids.png" />
     <Content Include="Images\kidsnotblurred.png" />
     <Content Include="Images\Pearson-Logo.png" />
     <Content Include="Images\Pearson-Logo2.png" />
     <Content Include="Images\pearson-white.png" />
+    <Content Include="Images\persons1.png" />
+    <Content Include="Images\persons2.png" />
     <Content Include="Login.aspx" />
+    <Content Include="NewApplicant.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyModule1.cs" />
+    <Compile Include="NewApplicant.aspx.cs">
+      <DependentUpon>NewApplicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewApplicant.aspx.designer.cs">
+      <DependentUpon>NewApplicant.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
